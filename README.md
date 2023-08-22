@@ -4,6 +4,7 @@ Repositório para guardar os códigos da disciplina de Linguagem de Programaçã
 ## Linguagens
 
 - [C](./c_language)
+- [Python](./python_language/)
 
 ## Licença
 
