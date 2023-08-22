@@ -1,4 +1,4 @@
-# C language</h1>
+# C language
 
 ## Algoritmos
 
