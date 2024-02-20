@@ -23,3 +23,11 @@ através do IMC (Índice de Massa Corpórea).
 
 
 3. Adapte o código anterior, de modo a fazer a leitura de um número indeterminado de pessoas.
+
+4. A prefeitura de uma cidade fez uma pesquisa entre seus habitantes, coletando dados sobre o salário e número de filhos. A prefeitura deseja saber:
+    - O número de pessoas com mais de 4 filhos
+    - Média do número de filhos
+    - Maior salário
+    - Menor salário
+  
+    O final da leitura de dados se dará com a entrada de um salário negativo.
