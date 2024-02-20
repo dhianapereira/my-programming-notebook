@@ -9,3 +9,16 @@ trabalhadas, o valor do salário-mínimo e a quantidade de horas extras trabalha
     **Sabendo que:**
     - A hora trabalhada vale 1/8 do salário-mínimo;
     - A hora extra vale 1⁄4 do salário-mínimo
+
+2. Faça um programa para exibir a situação do peso de uma pessoa. Essa situação é determinada
+através do IMC (Índice de Massa Corpórea).
+
+        |     Condição      | Situação       |
+        | :---------------: | -------------- |
+        | IMC abaixo de 20  | Abaixo do peso |
+        | IMC de 20 até 25  | Peso normal    |
+        | IMC de 25 até 30  | Sobre peso     |
+        | IMC de 30 até 40  | Obeso          |
+        | IMC de 40 e acima | Obeso mórbido  |
+
+        
