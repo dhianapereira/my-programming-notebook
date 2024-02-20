@@ -31,3 +31,5 @@ através do IMC (Índice de Massa Corpórea).
     - Menor salário
   
     O final da leitura de dados se dará com a entrada de um salário negativo.
+
+5. Fazer um programa que declare e inicialize um vetor de 10 posições para guardar números inteiros. Calcule e mostre: a média dos valores digitados, a quantidade de números pares, a quantidade de números ímpares.
