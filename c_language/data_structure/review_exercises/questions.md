@@ -21,4 +21,5 @@ através do IMC (Índice de Massa Corpórea).
         | IMC de 30 até 40  | Obeso          |
         | IMC de 40 e acima | Obeso mórbido  |
 
-        
+
+3. Adapte o código anterior, de modo a fazer a leitura de um número indeterminado de pessoas.
