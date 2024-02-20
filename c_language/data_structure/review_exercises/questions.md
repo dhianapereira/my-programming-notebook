@@ -33,3 +33,25 @@ através do IMC (Índice de Massa Corpórea).
     O final da leitura de dados se dará com a entrada de um salário negativo.
 
 5. Fazer um programa que declare e inicialize um vetor de 10 posições para guardar números inteiros. Calcule e mostre: a média dos valores digitados, a quantidade de números pares, a quantidade de números ímpares.
+
+6. Considerando as declarações:
+    ```c
+    struct aluno {
+        char nome[81];
+        char matricula[8];
+        char turma;
+        float n1;
+        float n2;
+        float n3;
+    };
+
+    typedef struct aluno Aluno;
+    ```
+
+    Para representar o cadastro de alunos de uma disciplina, implemente funções para:
+
+    - Fazer a leitura dos dados de vários alunos
+    - Fazer a atualização dos dados de um aluno, dado sua matrícula
+    - Fazer a exclusão de um aluno, dado sua matrícula
+    - Imprimir os alunos aprovados
+    - Imprimir os alunos reprovados
