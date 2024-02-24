@@ -3,5 +3,6 @@
 
 void printingArray(int arr[], int size);
 void swap(int* positionX, int* positionY);
+void counter(int* count);
 
 #endif
