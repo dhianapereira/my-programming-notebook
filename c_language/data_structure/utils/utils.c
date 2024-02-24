@@ -7,3 +7,9 @@ void printingArray(int arr[], int size){
     }
     printf("\n");
 }
+
+void swap(int* positionX, int* positionY){
+    int temp = *positionX;
+    *positionX = *positionY;
+    *positionY = temp;
+}
