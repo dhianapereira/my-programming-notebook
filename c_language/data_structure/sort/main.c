@@ -1,3 +1,7 @@
+/*
+    Comparison between bubbleSort and quickSort algorithms.
+*/
+
 #include "../utils/utils.h"
 #include "./sort.h"
 #include <stdio.h>

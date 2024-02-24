@@ -1,3 +1,7 @@
+/*
+    Comparison between binarySearch and sequentialSearch algorithms.
+*/
+
 #include "../utils/utils.h"
 #include "../sort/sort.h"
 #include "./search.h"
@@ -6,14 +10,11 @@
 int main() {
     int sequentialSearchCount = 0;
     int binarySearchCount = 0;    
-    int arr[] = {4, 50, 33, 125, 8, 1};
+    int arr[] = {1, 4, 8, 33, 50, 125};
     int size = sizeof(arr) / sizeof(arr[0]);
     int target = 125;
 
     printf("Array: ");
-    printingArray(arr, size);
-    bubbleSort(arr, size);
-    printf("Sorted Array: ");
     printingArray(arr, size);
    
     int firstResult = sequentialSearch(arr, size, target, &sequentialSearchCount);
