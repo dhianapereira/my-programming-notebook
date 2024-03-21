@@ -7,7 +7,7 @@ int* getNegativeNumbers(int *array, int size, int* count);
 int main()
 {
     int size, count = 0;
-    printf("What the array size?\n");
+    printf("What is the array size?\n");
     scanf("%d", &size);
     int* array = (int*)malloc(size * sizeof(int));
     
