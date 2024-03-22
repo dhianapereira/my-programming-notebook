@@ -6,3 +6,4 @@ Pasta dedicada aos códigos produzidos por mim na disciplina de Estrutura de dad
 - [Recursividade](./recursion/)
 - [Busca](./search/)
 - [Ordenação](./sort/)
+- [Alocação de memória](./memory_allocation/)
