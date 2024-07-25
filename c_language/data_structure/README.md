@@ -7,3 +7,4 @@ Pasta dedicada aos códigos produzidos por mim na disciplina de Estrutura de dad
 - [Busca](./search/)
 - [Ordenação](./sort/)
 - [Alocação de memória](./memory_allocation/)
+- [Listas simplesmente encadeadas](./singly_linked_list/)
