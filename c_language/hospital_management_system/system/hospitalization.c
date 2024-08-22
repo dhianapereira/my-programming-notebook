@@ -2,6 +2,13 @@
 #include <stdlib.h>
 #include "hospitalization.h"
 
+/**
+ * Adds a patient to the list of hospitalized patients.
+ * 
+ * @param head The current head of the hospitalized patients list.
+ * @param patient The patient to be added to the list.
+ * @return HospitalizationNode* The new head of the list after adding the patient.
+ */
 HospitalizationNode* addHospitalization(HospitalizationNode* head, Patient patient) {
     HospitalizationNode* newNode = (HospitalizationNode*)malloc(sizeof(HospitalizationNode));
     newNode->patient = patient;
@@ -9,6 +16,13 @@ HospitalizationNode* addHospitalization(HospitalizationNode* head, Patient patie
     return newNode;
 }
 
+/**
+ * Removes a patient from the hospitalization list by ID.
+ * 
+ * @param head The head of the list of hospitalized patients.
+ * @param id The unique identifier of the patient to remove.
+ * @return HospitalizationNode* The head of the list after removing the patient.
+ */
 HospitalizationNode* removeHospitalization(HospitalizationNode* head, int id) {
     HospitalizationNode* current = head;
     HospitalizationNode* previous = NULL;
@@ -19,7 +33,6 @@ HospitalizationNode* removeHospitalization(HospitalizationNode* head, int id) {
     }
 
     if (current == NULL) {
-        printf("Patient not found!\n");
         return head;
     }
 
@@ -33,6 +46,14 @@ HospitalizationNode* removeHospitalization(HospitalizationNode* head, int id) {
     return head;
 }
 
+/**
+ * Updates the hospitalization status for all hospitalized patients.
+ * 
+ * Increments the hospitalization days and prompts the user to discharge or continue
+ * hospitalization for each patient.
+ * 
+ * @param head A pointer to the head of the list of hospitalized patients.
+ */
 void updateHospitalization(HospitalizationNode** head) {
     if (*head == NULL) {
         printf("No hospitalizations to update.\n");
@@ -49,9 +70,9 @@ void updateHospitalization(HospitalizationNode** head) {
             int discharge;
             do {
                 printf("Discharge patient %s? (1 for Yes, 0 for No): ", current->patient.name);
-                scanf("%d", &discharge);
-                if (discharge != 1 && discharge != 0) {
-                    printf("Invalid option!\n");
+                while (scanf("%d", &discharge) != 1 || (discharge != 1 && discharge != 0)) {
+                    printf("Invalid option! Enter 1 for Yes, 0 for No: ");
+                    while (getchar() != '\n');
                 }
             } while (discharge != 1 && discharge != 0);
 
@@ -67,6 +88,11 @@ void updateHospitalization(HospitalizationNode** head) {
     }
 }
 
+/**
+ * Prints the details of hospitalized patients.
+ * 
+ * @param head The head of the list of hospitalized patients.
+ */
 void printHospitalizations(HospitalizationNode* head) {
     if (head == NULL) {
         printf("No patients are currently hospitalized.\n");
@@ -75,7 +101,9 @@ void printHospitalizations(HospitalizationNode* head) {
 
     HospitalizationNode* current = head;
     while (current != NULL) {
-        printf("Patient: %s, Severity: %d, Hospitalized: %d days\n", current->patient.name, current->patient.severity, current->patient.daysHospitalized);
+        printf("ID: %d, Name: %s, Age: %d, Severity: %d, Days Hospitalized: %d\n",
+               current->patient.id, current->patient.name, current->patient.age,
+               current->patient.severity, current->patient.daysHospitalized);
         current = current->next;
     }
 }

@@ -1,8 +1,18 @@
 #include <stdio.h>
 #include "hospital.h"
 
+/**
+ * Handles the treatment process for patients.
+ * 
+ * The function dequeues a patient from the appropriate severity queue and 
+ * prompts the user to decide whether to hospitalize or discharge the patient.
+ * 
+ * @param queues An array of pointers to the queues of patients sorted by severity.
+ * @param hospitalizations A pointer to the list of hospitalized patients.
+ */
 void handleTreatment(Queue** queues, HospitalizationNode** hospitalizations) {
     int treated = 0;
+
     for (int i = 0; i < 4; i++) {
         if (!isQueueEmpty(queues[i])) {
             treated = 1;
@@ -11,9 +21,9 @@ void handleTreatment(Queue** queues, HospitalizationNode** hospitalizations) {
             int hospitalize;
             do {
                 printf("Register treatment (1 for hospitalization, 0 for discharge): ");
-                scanf("%d", &hospitalize);
-                if (hospitalize != 1 && hospitalize != 0) {
-                    printf("Invalid option!\n");
+                while (scanf("%d", &hospitalize) != 1 || (hospitalize != 1 && hospitalize != 0)) {
+                    printf("Invalid option! Enter 1 for hospitalization, 0 for discharge: ");
+                    while (getchar() != '\n');
                 }
             } while (hospitalize != 1 && hospitalize != 0);
             
@@ -31,6 +41,15 @@ void handleTreatment(Queue** queues, HospitalizationNode** hospitalizations) {
     }
 }
 
+/**
+ * Generates a hospital report detailing the current state of queues and hospitalizations.
+ * 
+ * The report includes the number of patients in each severity queue and the details of 
+ * currently hospitalized patients.
+ * 
+ * @param head The head of the list of hospitalized patients.
+ * @param queues An array of pointers to the queues of patients sorted by severity.
+ */
 void generateReport(HospitalizationNode* head, Queue** queues) {
     int queuesEmpty = 1;
     for (int i = 0; i < 4; i++) {

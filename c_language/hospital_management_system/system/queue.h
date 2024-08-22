@@ -16,5 +16,6 @@ void destroyQueue(Queue* queue);
 void enqueue(Queue* queue, Patient patient);
 Patient dequeue(Queue* queue);
 int isQueueEmpty(Queue* queue);
+int isQueueFull(Queue* queue);
 
 #endif

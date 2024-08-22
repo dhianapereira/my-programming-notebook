@@ -1,9 +1,17 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "system/patient.h"
 #include "system/queue.h"
 #include "system/hospitalization.h"
 #include "system/hospital.h"
 
+/**
+ * Main entry point of the Hospital Management System.
+ * 
+ * Provides a menu for registering patients, handling treatments, 
+ * updating hospitalizations, printing hospitalization details, 
+ * and generating reports. 
+ */
 int main() {
     int capacity = 10;
     Queue* queues[4];
@@ -26,7 +34,11 @@ int main() {
         printf("5 - Generate report\n");
         printf("0 - Exit\n");
         printf("Choose an option: ");
-        scanf("%d", &option);
+        
+        while (scanf("%d", &option) != 1 || option < 0 || option > 5) {
+            printf("Invalid option! Please choose a valid option: ");
+            while (getchar() != '\n');
+        }
 
         switch (option) {
             case 1: {
@@ -48,9 +60,6 @@ int main() {
                 break;
             case 0:
                 printf("Exiting...\n");
-                break;
-            default:
-                printf("Invalid option!\n");
                 break;
         }
     } while (option != 0);
