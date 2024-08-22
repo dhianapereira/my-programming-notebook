@@ -2,6 +2,18 @@
 
 Este sistema de gerenciamento de fila de atendimento de hospital permite gerenciar o atendimento de pacientes com diferentes níveis de gravidade. O programa realiza o cadastro de pacientes, tratamento, geração de relatórios e acompanhamento de internações. Pacientes são priorizados com base na gravidade, e o sistema permite que um médico registre tratamentos, realize internações e acompanhe o progresso até a alta do paciente.
 
+- [Hospital Management System](#hospital-management-system)
+  - [Estruturas de Dados Utilizadas](#estruturas-de-dados-utilizadas)
+    - [Fila (Queue):](#fila-queue)
+    - [Lista Encadeada (HospitalizationNode):](#lista-encadeada-hospitalizationnode)
+  - [Funcionalidades](#funcionalidades)
+  - [Guia de Instalação](#guia-de-instalação)
+    - [1. Clone o repositório](#1-clone-o-repositório)
+    - [2. Entre na pasta do projeto](#2-entre-na-pasta-do-projeto)
+    - [3. Compile o projeto](#3-compile-o-projeto)
+    - [4. Execute o programa](#4-execute-o-programa)
+  - [Mini Tutorial](#mini-tutorial)
+
 ## Estruturas de Dados Utilizadas
 
 ### Fila (Queue):
@@ -33,7 +45,7 @@ git clone htthttps://github.com/dhianapereira/my-programming-notebook.git
 ### 2. Entre na pasta do projeto
 
 ```bash
-cd hospital-management-system
+cd c_language/hospital_management_system
 ```
 
 ### 3. Compile o projeto
