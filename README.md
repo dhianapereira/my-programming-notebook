@@ -1,6 +1,7 @@
 # programming-language-discipline
 
 Repositório para guardar os códigos da disciplina de Linguagem de Programação e os algoritmos criados para aprender uma nova linguagem. 
+
 ## Linguagens
 
 - [C](./c_language)
